@@ -1,10 +1,11 @@
+// app.js
 function sendMessage() {
     const from = document.getElementById("currentUser").value;
     const to = document.getElementById("toUser").value;
     const text = document.getElementById("message").value;
 
     if (!text.trim() || from === to) return;
-
+   
     fetch("http://localhost:8080/send", {
         method: "POST",
         headers: {
